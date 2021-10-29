@@ -13,6 +13,11 @@ app.use(cors({ origin: ["http://localhost:3000"] }));
 app.use("/user", userRouter);
 app.use("/blog", blogRouter);
 
+app.get("/", (req, res) => {
+  console.log("request accepted");
+  res.send("Server Online!!");
+});
+
 app.listen(port, () => {
   console.log("server started ...");
 });
