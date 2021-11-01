@@ -6,10 +6,11 @@ const schema = new mongoose.Schema({
     title : String,
     description : String,
     tags : Array,
-    // heroimage : String,
+    thumbnail : String,
     data: String,
     published : { type: Date, default: new Date() },
-    // author : {type :mongoose.Types.ObjectId, ref: "users"}
+    author : {type :mongoose.Types.ObjectId, ref: "users"},
+    username : String
     
 })
 

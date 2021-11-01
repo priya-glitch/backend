@@ -6,7 +6,7 @@ router.post('/add', (req, res) => {
 
     new Model(req.body).save()
         .then(() => {
-            console.log('data added');
+            console.log(' blog data added');
             res.status(200).json({ message: 'success' })
         })
         .catch((err) => {
@@ -19,7 +19,7 @@ router.post('/add', (req, res) => {
 router.get('/getall', (req, res) => {
     Model.find({})
         .then((data) => {
-            console.log('all data fetched');
+            console.log('all blog data fetched');
             res.status(200).json(data);
         })
         .catch((err) => {
